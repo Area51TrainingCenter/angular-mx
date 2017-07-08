@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DishListComponent } from './dish-list/dish-list.component';
 import { DishListItemComponent } from './dish-list-item/dish-list-item.component';
+import { ArticleComponent } from './article/article.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DishListComponent,
-    DishListItemComponent
+    DishListItemComponent,
+    ArticleComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,19 @@
+<form class="ui large form segment">
+  <h3 class="ui header"> Agregar link</h3>
+
+  <div class="field">
+    <label for="title">Título: </label>
+    <input name="title" id="title">
+  </div>
+
+  <div class="field">
+    <label for="link">Link: </label>
+    <input name="link" id="link">
+  </div>
+
+  <button class="ui positive right floated button"> Guardar link</button>
+</form>
+
+<div class="ui grid posts">
+  <app-article class="row" *ngFor="let article of articles" [article]="article"></app-article>
+</div>
