@@ -1,0 +1,25 @@
+<div [ngClass]="{ bordered: true }">
+  Siempre con borde
+</div>
+<div [ngClass]="{ bordered: false }">
+  Siempre sin borde
+</div>
+
+<div [ngClass]="{ bordered: isBordered }">
+  Borde {{ isBordered ? 'ON': 'OFF' }}
+</div>
+
+<div [ngClass]="classesObj">
+  Borde {{ isBordered ? 'ON': 'OFF' }}
+</div>
+
+<button (click)="toggleBorder()">Toggle</button>
+
+<div [ngClass]="['blue', 'round']" >
+  Always
+</div>
+
+<div [ngClass]="classList" >
+  Always
+</div>
+
