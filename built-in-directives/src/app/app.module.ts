@@ -21,6 +21,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 
 import { ExampleDef } from './example.model';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import { NgStyleComponent } from './ng-style/ng-style.component';
 
 
 // Master list
@@ -28,7 +29,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 export const examples: ExampleDef[] = [
   { label: 'Intro', name: 'Root', path: '', component: IntroComponent },
   { label: 'ngIf', name: 'ngif', path: 'ng-if', component: NgIfComponent },
-  { label: 'ngSwitch', name: 'ngswitch', path: 'ng-switch', component: NgSwitchComponent }
+  { label: 'ngSwitch', name: 'ngswitch', path: 'ng-switch', component: NgSwitchComponent },
+  { label: 'ngStyle', name: 'ngstyle', path: 'ng-style', component: NgStyleComponent }
 ]
 
 //Routes
@@ -36,7 +38,8 @@ export const examples: ExampleDef[] = [
 const routes: Routes = [
   { path: '', component: IntroComponent, pathMatch: 'full' },
   { path: 'ng-if', component: NgIfComponent, pathMatch: 'full' },
-  { path: 'ng-switch', component: NgSwitchComponent, pathMatch: 'full' }
+  { path: 'ng-switch', component: NgSwitchComponent, pathMatch: 'full' },
+  { path: 'ng-style', component: NgStyleComponent, pathMatch: 'full' }
 ]
 
 
@@ -48,6 +51,7 @@ const routes: Routes = [
     SidebarItemComponent,
     IntroComponent,
     NgSwitchComponent,
+    NgStyleComponent,
   ],
   imports: [
     BrowserModule,
