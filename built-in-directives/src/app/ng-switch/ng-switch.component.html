@@ -1,3 +1,22 @@
-<p>
-  ng-switch works!
-</p>
+<h4 class="ui horizontal divider header">
+  Mi selección actual es: {{ choice }}
+</h4>
+
+<div class="ui raised segment">
+  <ul [ngSwitch]="choice">
+    <li *ngSwitchCase="1">Opción 1</li>
+    <li *ngSwitchCase="2">Opción 2</li>
+    <li *ngSwitchCase="3">Opción 3</li>
+    <li *ngSwitchCase="4">Opción 4</li>
+    <li *ngSwitchCase="2">Opción 2 de nuevo</li>
+    <li *ngSwitchCase="2">Opción 2 de nuevo</li>
+    <li *ngSwitchCase="3">Opción 3 de nuevo</li>
+    <li *ngSwitchDefault>Default</li>
+  </ul>
+</div>
+
+<div style="margin-top: 20px;">
+  <button class="ui primary button" (click)="nextChoice()">
+    Siguiente opción...
+  </button>
+</div>

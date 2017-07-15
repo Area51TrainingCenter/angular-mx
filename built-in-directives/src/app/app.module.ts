@@ -27,14 +27,16 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 export const examples: ExampleDef[] = [
   { label: 'Intro', name: 'Root', path: '', component: IntroComponent },
-  { label: 'ngIf', name: 'ngif', path: 'ng-if', component: NgIfComponent }
+  { label: 'ngIf', name: 'ngif', path: 'ng-if', component: NgIfComponent },
+  { label: 'ngSwitch', name: 'ngswitch', path: 'ng-switch', component: NgSwitchComponent }
 ]
 
 //Routes
 
 const routes: Routes = [
   { path: '', component: IntroComponent, pathMatch: 'full' },
-  { path: 'ng-if', component: NgIfComponent, pathMatch: 'full' }
+  { path: 'ng-if', component: NgIfComponent, pathMatch: 'full' },
+  { path: 'ng-switch', component: NgSwitchComponent, pathMatch: 'full' }
 ]
 
 
