@@ -20,6 +20,7 @@ import { NgIfComponent } from './ng-if/ng-if.component';
 
 
 import { ExampleDef } from './example.model';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 
 // Master list
@@ -44,6 +45,7 @@ const routes: Routes = [
     SidebarComponent,
     SidebarItemComponent,
     IntroComponent,
+    NgSwitchComponent,
   ],
   imports: [
     BrowserModule,
