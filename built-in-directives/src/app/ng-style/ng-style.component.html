@@ -1,3 +1,55 @@
-<p>
-  ng-style works!
-</p>
+<h4 class="ui horizontal divider header">
+  style.background-color
+</h4>
+
+<div [style.background-color]="'yellow'">
+  Amarillo
+</div>
+<!-- 
+<div style="background-color:yellow;">
+  Amarillo
+</div> -->
+
+<h4 class="ui horizontal divider header">
+  ngStyle literal
+</h4>
+
+<div [ngStyle]="{ color: 'white', 'background-color': 'blue', padding: '10px', 'border-radius': '10px'}">
+  Uso de ngStyle
+</div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle con style.font
+</h4>
+
+<div [ngStyle]="{ color: color}" [style.font-size.px]="fontSize">
+  Combinaciones
+</div>
+
+<h4 class="ui horizontal divider header">
+  ngStyle con objecto
+</h4>
+
+<div [ngStyle]="styles">
+  Con objeto
+</div>
+
+<div style="color:color">
+  asdasdas
+</div>
+
+<h4 class="ui horizontal divider header">
+  Con funciones y binding
+</h4>
+
+<div class="ui input">
+  <input type="text" name="color" value="{{ color }}" #colorInput>
+</div>
+
+<div class="ui input">
+  <input type="text" name="fontSize" value="{{ fontSize }}" #fontInput>
+</div>
+
+<button class="ui primary button" (click)="apply(colorInput.value, fontInput.value)">
+  Aplicar estilos
+</button>

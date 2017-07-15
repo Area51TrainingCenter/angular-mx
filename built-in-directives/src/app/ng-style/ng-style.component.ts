@@ -9,9 +9,10 @@ export class NgStyleComponent implements OnInit {
   color: string;
   fontSize: number;
 
-  style: {
+  styles: {
     'background-color': string,
     'border-radius': string,
+    'text-align': string,
     border?: string,
     width?: string,
     height?: string
@@ -24,11 +25,12 @@ export class NgStyleComponent implements OnInit {
   ngOnInit() {
     this.fontSize = 16;
     this.color = 'blue';
-    this.style = {
+    this.styles = {
       'background-color': '#ccc',
       'border-radius': '50px',
       'height': '30px',
-      'width': '30px'
+      'width': '230px',
+      'text-align': 'center'
     };
   }
 
