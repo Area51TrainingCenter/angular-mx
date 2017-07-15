@@ -17,4 +17,19 @@ export class AppComponent {
       new Article('Bootstrap', 'https://getbootstrap.com/', 4)
     ]
   }
+
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
+    console.log(`Se agrego el artículo ${title.value} con el link ${link.value}`)
+    this.articles.push(new Article(title.value, link.value, 0));
+    title.value = '';
+    link.value = '';
+    return false;
+  }
+
+  sortedArticles(): Article[] {
+    return this.articles.sort(
+      (a: Article, b: Article) => b.votes - a.votes
+    );
+  }
+
 }

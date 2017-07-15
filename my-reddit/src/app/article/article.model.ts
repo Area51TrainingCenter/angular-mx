@@ -17,4 +17,14 @@ export class Article {
     this.votes -= 1;
   }
 
+  domain(): string {
+    try {
+      const domainAndPath: string = this.link.split('//')[1];
+      return domainAndPath.split('/')[0];
+    } catch (err) {
+      return null;
+    }
+
+  }
+
 }
