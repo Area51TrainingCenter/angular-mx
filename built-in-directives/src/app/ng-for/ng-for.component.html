@@ -1,3 +1,17 @@
-<p>
-  ng-for works!
-</p>
+<ul class="ul list">
+  <li *ngFor="let city of cities">
+    {{ city }}
+  </li>
+</ul>
+
+<ul class="ul list">
+  <li *ngFor="let person of people">
+    {{ person.name }}
+  </li>
+</ul>
+
+<select (change)="showPerson(person.value)" #person>
+  <option *ngFor="let person of people" [value]="person">
+    {{ person.name }}
+  </option>
+</select>

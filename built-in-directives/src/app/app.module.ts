@@ -33,7 +33,8 @@ export const examples: ExampleDef[] = [
   { label: 'ngIf', name: 'ngif', path: 'ng-if', component: NgIfComponent },
   { label: 'ngSwitch', name: 'ngswitch', path: 'ng-switch', component: NgSwitchComponent },
   { label: 'ngStyle', name: 'ngstyle', path: 'ng-style', component: NgStyleComponent },
-  { label: 'ngClass', name: 'ngclass', path: 'ng-class', component: NgClassComponent }
+  { label: 'ngClass', name: 'ngclass', path: 'ng-class', component: NgClassComponent },
+  { label: 'ngFor', name: 'ngfor', path: 'ng-for', component: NgForComponent }
 ]
 
 //Routes
@@ -43,7 +44,8 @@ const routes: Routes = [
   { path: 'ng-if', component: NgIfComponent, pathMatch: 'full' },
   { path: 'ng-switch', component: NgSwitchComponent, pathMatch: 'full' },
   { path: 'ng-style', component: NgStyleComponent, pathMatch: 'full' },
-  { path: 'ng-class', component: NgClassComponent, pathMatch: 'full' }
+  { path: 'ng-class', component: NgClassComponent, pathMatch: 'full' },
+  { path: 'ng-for', component: NgForComponent, pathMatch: 'full' }
 ]
 
 
