@@ -23,6 +23,7 @@ import { ExampleDef } from './example.model';
 import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 import { NgStyleComponent } from './ng-style/ng-style.component';
 import { NgClassComponent } from './ng-class/ng-class.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 
 // Master list
@@ -56,6 +57,7 @@ const routes: Routes = [
     NgSwitchComponent,
     NgStyleComponent,
     NgClassComponent,
+    NgForComponent,
   ],
   imports: [
     BrowserModule,
