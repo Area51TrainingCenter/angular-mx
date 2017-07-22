@@ -19,6 +19,12 @@ import { LoginComponent } from './login/login.component';
 import { AUTH_PROVIDERS } from './auth.service';
 import { ProtectedComponent } from './protected/protected.component';
 import { LoggedInGuard } from './logged-in.guard';
+import { ProductsComponent } from './products/products.component';
+
+import {
+  ProductsModule,
+  routes as childRoutes
+} from './products/products.module';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -28,6 +34,7 @@ const routes: Routes = [
   { path: 'contacto', redirectTo: 'contact' },
   { path: 'login', component: LoginComponent },
   { path: 'protected', component: ProtectedComponent, canActivate: [LoggedInGuard] },
+  { path: 'products', component: ProductsComponent, children: childRoutes },
   { path: '**', component: P404Component }
 ]
 
@@ -39,12 +46,12 @@ const routes: Routes = [
     ContactComponent,
     P404Component,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [
     AUTH_PROVIDERS,
