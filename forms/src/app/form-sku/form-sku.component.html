@@ -1,10 +1,19 @@
 <div class="ui raised segment">
   <h2 class="ui header">Sku</h2>
-  <form #f="ngForm" class="ui form" (ngSubmit)="onSubmit(f.value)">
+  <!-- <form #f="ngForm" class="ui form" (ngSubmit)="onSubmit(f.value)"> -->
+  <form [formGroup]="myForm" class="ui form" (ngSubmit)="onSubmit(myForm.value)">
 
     <div class="field">
       <label for="skuInput">SKU</label>
-      <input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel>
+      <!-- <input type="text" id="skuInput" placeholder="SKU" name="sku" ngModel>
+      <input type="text" id="qtyInput" placeholder="QTY" name="qtyy" ngModel>
+      <input type="text" id="nameInput" placeholder="NAME" name="name" ngModel>-->
+      <input type="text" id="nameInput" placeholder="NAME"
+       name="name" [formControl]="myForm.controls['name']">
+      <hr>
+      <label for="ageInput">EDAD</label>
+      <input type="text" id="ageInput" placeholder="EDAD" 
+      name="age" [formControl]="myForm.controls['age']">
     </div>
 
     <button type="submit" class="ui button">Submit</button>

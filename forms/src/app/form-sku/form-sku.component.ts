@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup
+} from '@angular/forms';
+
 
 @Component({
   selector: 'app-form-sku',
@@ -6,8 +11,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-sku.component.css']
 })
 export class FormSkuComponent implements OnInit {
+  myForm: FormGroup;
 
-  constructor() { }
+  constructor(fb: FormBuilder) {
+    this.myForm = fb.group({
+      'age': ['35'],
+      'name': ['']
+    });
+  }
 
   ngOnInit() {
   }
