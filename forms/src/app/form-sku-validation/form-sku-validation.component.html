@@ -1,21 +1,26 @@
 <div class="ui raised segment">
   <h2 class="ui header">Validaciones</h2>
-  <form [formGroup]="myForm"
-        (ngSubmit)="onSubmit(myForm.value)"
-        class="ui form"
-        >
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm.value)" class="ui form" [class.error]="!myForm.valid && myForm.touched">
 
-    <div class="field">
+    <div class="field" [class.error]="!sku.valid && sku.touched">
       <label for="skuInput">SKU</label>
-      <input type="text"
-             id="skuInput"
-             placeholder="SKU">
-             
-      
+      <input type="text" id="skuInput" placeholder="SKU" [formControl]="sku">
+
+      <div *ngIf="!sku.valid" class="ui error message">
+        El es SKU es invalido
+      </div>
+      <div *ngIf="sku.hasError('required')" class="ui error message">
+        El es SKU es requerido
+      </div>
+
+       <div *ngIf="sku.hasError('invalidSku')" class="ui error message">
+        El es SKU debe comenzar con 123
+      </div>
+
     </div>
 
-   
 
-    <button type="submit" class="ui button">Submit</button>
+
+    <button type="submit" class="ui button" [disabled]="!myForm.valid">Submit</button>
   </form>
 </div>
