@@ -11,6 +11,10 @@ import {
   LocationStrategy,
   HashLocationStrategy
 } from '@angular/common';
+import {
+  FormsModule,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -48,6 +52,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
     //RouterModule.forRoot(routes, { enableTracing: true })
   ],
