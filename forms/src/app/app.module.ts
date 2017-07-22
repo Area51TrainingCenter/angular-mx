@@ -24,20 +24,23 @@ import { IntroComponent } from './intro/intro.component';
 
 import { ExampleDef } from './example.model';
 import { FormSkuComponent } from './form-sku/form-sku.component';
+import { FormSkuValidationComponent } from './form-sku-validation/form-sku-validation.component';
 
 
 // Master list
 
 export const examples: ExampleDef[] = [
   { label: 'Intro', name: 'Root', path: '', component: IntroComponent },
-  { label: 'Form SKU', name: 'sku', path: 'sku', component: FormSkuComponent }
+  { label: 'Form SKU', name: 'sku', path: 'sku', component: FormSkuComponent },
+  { label: 'Form Validation', name: 'validation', path: 'validation', component: FormSkuValidationComponent }
 ]
 
 //Routes
 
 const routes: Routes = [
   { path: '', component: IntroComponent, pathMatch: 'full' },
-  { path: 'sku', component: FormSkuComponent, pathMatch: 'full' }
+  { path: 'sku', component: FormSkuComponent, pathMatch: 'full' },
+  { path: 'validation', component: FormSkuValidationComponent, pathMatch: 'full' }
 ]
 
 
@@ -47,7 +50,8 @@ const routes: Routes = [
     SidebarComponent,
     SidebarItemComponent,
     IntroComponent,
-    FormSkuComponent
+    FormSkuComponent,
+    FormSkuValidationComponent
   ],
   imports: [
     BrowserModule,

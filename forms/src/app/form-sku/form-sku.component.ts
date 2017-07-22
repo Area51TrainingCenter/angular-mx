@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
-  FormGroup
+  FormGroup,
+  Validators,
+  AbstractControl
 } from '@angular/forms';
 
 
@@ -15,7 +17,7 @@ export class FormSkuComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.myForm = fb.group({
-      'age': ['35'],
+      'age': ['35', Validators.required],
       'name': ['']
     });
   }
