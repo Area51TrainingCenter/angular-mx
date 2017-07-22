@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import {
   RouterModule,
-  Routes,
   ActivatedRoute,
-  Router
+  Router,
+  Routes
 } from '@angular/router'
 
 import { ProductsComponent } from './products.component';
@@ -14,6 +14,7 @@ import { MainComponent } from './main/main.component';
 import { ProductInfoComponent } from './product-info/product-info.component';
 
 export const routes: Routes = [
+  { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'product-info', component: ProductInfoComponent },
   { path: 'product', component: ProductComponent }

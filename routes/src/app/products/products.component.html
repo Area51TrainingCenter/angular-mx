@@ -1,3 +1,11 @@
-<p>
-  products works!
-</p>
+<h2>Productos</h2>
+
+<div class="navLinks">
+  <a [routerLink]="['./main']">Main</a>
+  <a [routerLink]="['./product-info']">Mas info</a>
+  <a [routerLink]="['./product']">El producto</a>
+</div>
+
+<div class="products-area">
+  <router-outlet></router-outlet>
+</div>

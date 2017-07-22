@@ -46,12 +46,12 @@ const routes: Routes = [
     ContactComponent,
     P404Component,
     LoginComponent,
-    ProtectedComponent,
-    ProductsComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ProductsModule
   ],
   providers: [
     AUTH_PROVIDERS,
