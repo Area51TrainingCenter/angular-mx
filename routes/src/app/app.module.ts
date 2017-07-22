@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'contacto', redirectTo: 'contact' },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: P404Component },
 
 
