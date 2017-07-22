@@ -1,6 +1,9 @@
 <h2>Petición básica</h2>
 
 <button type="button" (click)="makeRequest()">Hacer petición</button>
+<button type="button" (click)="makePost()">Enviar datos</button>
+<button type="button" (click)="makeDelete()">Eliminar datos</button>
+<button type="button" (click)="makeHeaders()">Enviar encabezdo</button>
 
 <div *ngIf="loading">
   Cargando...
