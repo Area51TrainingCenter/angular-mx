@@ -19,18 +19,21 @@ import { IntroComponent } from './intro/intro.component';
 
 
 import { ExampleDef } from './example.model';
+import { FormSkuComponent } from './form-sku/form-sku.component';
 
 
 // Master list
 
 export const examples: ExampleDef[] = [
-  { label: 'Intro', name: 'Root', path: '', component: IntroComponent }
+  { label: 'Intro', name: 'Root', path: '', component: IntroComponent },
+  { label: 'Form SKU', name: 'sku', path: 'sku', component: FormSkuComponent }
 ]
 
 //Routes
 
 const routes: Routes = [
-  { path: '', component: IntroComponent, pathMatch: 'full' }
+  { path: '', component: IntroComponent, pathMatch: 'full' },
+  { path: 'sku', component: FormSkuComponent, pathMatch: 'full' }
 ]
 
 
@@ -39,12 +42,14 @@ const routes: Routes = [
     AppComponent,
     SidebarComponent,
     SidebarItemComponent,
-    IntroComponent
+    IntroComponent,
+    FormSkuComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(routes, { enableTracing: true })
+    RouterModule.forRoot(routes)
+    //RouterModule.forRoot(routes, { enableTracing: true })
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
