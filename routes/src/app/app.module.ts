@@ -17,6 +17,8 @@ import { ContactComponent } from './contact/contact.component';
 import { P404Component } from './p404/p404.component';
 import { LoginComponent } from './login/login.component';
 import { AUTH_PROVIDERS } from './auth.service';
+import { ProtectedComponent } from './protected/protected.component';
+import { LoggedInGuard } from './logged-in.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -25,9 +27,8 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'contacto', redirectTo: 'contact' },
   { path: 'login', component: LoginComponent },
-  { path: '**', component: P404Component },
-
-
+  { path: 'protected', component: ProtectedComponent, canActivate: [LoggedInGuard] },
+  { path: '**', component: P404Component }
 ]
 
 @NgModule({
@@ -37,7 +38,8 @@ const routes: Routes = [
     AboutComponent,
     ContactComponent,
     P404Component,
-    LoginComponent
+    LoginComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ const routes: Routes = [
 
   ],
   providers: [
-    AUTH_PROVIDERS
+    AUTH_PROVIDERS,
+    LoggedInGuard
     //{ provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
