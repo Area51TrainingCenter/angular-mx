@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'product-info', component: ProductInfoComponent },
-  { path: 'product', component: ProductComponent }
+  { path: ':id', component: ProductComponent }
 ];
 
 @NgModule({

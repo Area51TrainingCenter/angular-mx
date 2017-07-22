@@ -3,7 +3,10 @@
 <div class="navLinks">
   <a [routerLink]="['./main']">Main</a>
   <a [routerLink]="['./product-info']">Mas info</a>
-  <a [routerLink]="['./product']">El producto</a>
+  
+  Escribe el id: <input #id size="6">
+  <button (click)="goToProduct(id.value)">Ver producto</button>
+
 </div>
 
 <div class="products-area">
